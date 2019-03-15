@@ -1,0 +1,31 @@
+/* pages/commodity/commodity.wxss */
+
+.bgView {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.bgScro {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.swiper_abroad {
+    width: 100vw;
+    height: 22vh;
+    position: relative;
+}
+
+.swiper {
+    width: 100vw;
+    height: 22vh;
+    position: absolute;
+}
+
+.swiper_img {
+    width: 100vw;
+    height: 22vh;
+    position: relative;
+}

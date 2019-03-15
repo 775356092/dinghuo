@@ -1,0 +1,15 @@
+<!--pages/commodity/commodity.wxml-->
+<view class="bgView">
+  <scroll-view>
+    <!-- 图片滚动 -->
+    <view class="swiper_abroad">
+      <swiper autoplay="true" circular="true" class="swiper" duration="500" indicatorDots="true" interval="5000">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <image src="{{item}}" style="width:100%;height:100%"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </scroll-view>
+</view>

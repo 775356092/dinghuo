@@ -1,0 +1,54 @@
+<!--pages/shoppingcart/shoppingcart.wxml-->
+<scroll-view class="scroll" scroll-y="{{isScroll}}">
+  <view class="separate"></view>
+
+  <!-- 购物车列表 -->
+  <view wx:key="item" wx:for="{{carts}}">
+    <view class="cart_container" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="right:{{item.right}}rpx">
+
+      <image class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{item.id}}" src="{{item.isSelect?'../../images/comment_normal.png':'../../images/comment_select.png'}}" />
+      <image class="item-image" src="{{item.pic}}"></image>
+
+      <view class="column">
+        <text class="title">{{item.name}}</text>
+        <view class="row">
+          <text class="sku-price">￥</text>
+          <text class="sku-price">{{item.price}}</text>
+          <!-- <view class="sku">
+            <template is="quantity" data="{{ ...item.count, componentId: index }}" />
+          </view> -->
+        </view>
+      </view>
+      <view class="dian" >
+        <view class="stepper" data-index="{{index}}" data-id="{{item.id}}">
+          <!-- 减号 -->
+          <text bindtap="bindMinus" data-index="{{index}}" data-id="{{item.id}}">-</text>
+          <!-- 数值 -->
+          <input type="number" value="{{item.count.quantity}}" />
+          <!-- 加号 -->
+          <text bindtap="bindPlus" data-index="{{index}}" data-id="{{item.id}}">+</text>
+        </view>
+      </view>
+
+      <!-- 左滑删除按钮 -->
+
+      <view class="del" data-id="{{item.id}}" data-index="{{index}}" bindtap="delcart">删除</view>
+
+    </view>
+    <view class="separate"></view>
+  </view>
+
+</scroll-view>
+
+<!-- 购物车底部 -->
+<view class="bottom_total">
+  <view class="bottom_line"></view>
+  <view class="row">
+    <image class="item-allselect" bindtap="allSelect" src="{{isAllSelect?'../../images/comment_normal.png':'../../images/comment_select.png'}}" />
+    <text class="small_text">全选</text>
+    <text class="total_price">合计:￥</text>
+    <text class="price">{{totalMoney}}</text>
+    <button class="button-red" bindtap="toBuy" formType="submit">去结算</button>
+  </view>
+
+</view>

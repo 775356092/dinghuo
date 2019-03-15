@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/shoppingcart/shoppingcart",
+    "pages/index/index",
+    "pages/commodity/commodity",
+    "pages/personal/personal"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "电动车订货系统",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#000",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/commodity/commodity",
+        "text": "主页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/selected-home.png"
+      },
+      {
+        "pagePath": "pages/shoppingcart/shoppingcart",
+        "text": "购物车",
+        "iconPath": "images/shopcart.png",
+        "selectedIconPath": "images/selected-shopcart.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/selected-my.png"
+      }
+    ]
+  }
+}

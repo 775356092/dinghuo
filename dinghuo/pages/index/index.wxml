@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<form bindsubmit="formSubmit">
+  <view class="container">
+    <view class="userinfo">
+      <text class="title">电动车订货系统</text>
+    </view>
+    <view class="forms">
+      <icon class="iconfont icon-zhanghao"></icon>
+      <input class="form_input" name="username" placeholder="请输入账号"></input>
+    </view>
+    <view class="forms">
+      <icon class="iconfont icon-mima"></icon>
+      <input class="form_input" name="password" type="password" placeholder="请输入密码"></input>
+    </view>
+    <view class="submit_button">
+      <button class="button" form-type="submit">登录</button>
+    </view>
+  </view>
+</form>
