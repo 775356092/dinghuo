@@ -124,8 +124,10 @@ Page({
     let i = 0;
     if (!this.data.isAllSelect) {
       for (i = 0; i < this.data.carts.length; i++) {
-        this.data.carts[i].isSelect = true;
-        this.data.totalMoney = this.data.totalMoney + this.data.carts[i].price * this.data.carts[i].count.quantity;
+        if (!this.data.carts[i].isSelect) {
+          this.data.carts[i].isSelect = true;
+          this.data.totalMoney = this.data.totalMoney + this.data.carts[i].price * this.data.carts[i].count.quantity;
+        }
       }
     } else {
       for (i = 0; i < this.data.carts.length; i++) {
@@ -266,10 +268,10 @@ Page({
     // console.log(this.data.carts.length);
 
     this.data.totalMoney = 0;
-     for (i = 0; i < this.data.carts.length; i++) {
-       if (this.data.carts[i].isSelect) {
-         this.data.totalMoney = this.data.totalMoney + this.data.carts[i].price * this.data.carts[i].count.quantity;
-       }
+    for (i = 0; i < this.data.carts.length; i++) {
+      if (this.data.carts[i].isSelect) {
+        this.data.totalMoney = this.data.totalMoney + this.data.carts[i].price * this.data.carts[i].count.quantity;
+      }
     }
 
     this.setData({

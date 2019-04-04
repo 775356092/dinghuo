@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/shoppingcart/shoppingcart",
-    "pages/index/index",
-    "pages/commodity/commodity",
-    "pages/personal/personal"
+      "pages/shoppingcart/shoppingcart",
+      "pages/index/index",
+      "pages/commodity/commodity",
+      "pages/personal/personal"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -36,4 +36,5 @@
       }
     ]
   }
+  
 }
